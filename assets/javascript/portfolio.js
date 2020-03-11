@@ -5,15 +5,7 @@ Credits:
     - expl0it, shellcode.team
     - Steam (emoticon: https://steamcommunity-a.akamaihd.net/economy/emoticon/mgh_17)
     - Trollface image (http://www.rw-designer.com/icon-image/7835-256x256x32.png)
-    - Tumblr images/icons:
-        a) https://68.media.tumblr.com/730ba51e7f6b0203e023deeb0db8367b/tumblr_osgbbiLXWV1suieauo1_500.jpg
-        b) https://68.media.tumblr.com/8436227895295acecdea170b612fb766/tumblr_nxgg5bYqm81rclv0wo1_500.jpg
-        c) http://images.neon-sign.org/l-m/rose-flower-love-neon-sign.jpg
-        d) https://media.istockphoto.com/vectors/rose-neon-sign-vector-id1088857104?k=6&m=1088857104&s=612x612&w=0&h=ZJCYow5i8noF6nTGHEd6b2bbe9X6rVx4cLDoceexAec=
-        e) https://image.freepik.com/free-vector/polygonal-geometric-rose-neon-sign_1262-19626.jpg
-        f) https://68.media.tumblr.com/49394d5aa66d4c7ea4ffebda38c6be7e/tumblr_orv2rd9eVC1rgewhto1_400.gif
-        g) https://ih1.redbubble.net/image.268210271.5200/sticker,375x360-bg,ffffff.u2.png
-        h) http://picture-cdn.wheretoget.it/ot63b4-l-610x610-shirt-rose-tumblr-grunge-grunge+t+shirt-clothes-t+shirt-tumblr+shirt-dead+roses-black+bear-soft+grunge-soft-soft+ghetto-ghetto-chill-cute-white-red-red+roses-white+tee-pale-sad-dar.jpg
+    - Ponies images: https://www.freepngimg.com/cartoon/my-little-pony
 
 Thanks for:
     - Google
@@ -24,6 +16,7 @@ Thanks for:
     - typed.js
     
 GitHub: https://github.com/Lumm1t/obnoxious.club
+GitHub: https://github.com/playday3008/playday3008.github.io															
 
 */
 
@@ -41,28 +34,18 @@ GitHub: https://github.com/Lumm1t/obnoxious.club
     $(document).ready(function () {
         var links = [
             {
-                name: 'Lummit',
-                link: '76561197960276740'
+                name: 'PlayDay',
+                link: '76561198305949649'
             },
                 
             {
-                name: 'Neso',
-                link: '76561198193201687'
+                name: 'w1ldac3',
+                link: '76561198855578500'
             },
                 
             {
-                name: 'loljuxd',
-                link: '76561197985625197'
-            },
-
-            {
-                name: 'Vez',
-                link: '76561198823371232'
-            },
-
-            {
-                name: 'mannin',
-                link: '76561198053882179'
+                name: 'Violet Scar',
+                link: '76561198807768386'
             }
         ];
          
@@ -74,26 +57,26 @@ GitHub: https://github.com/Lumm1t/obnoxious.club
             link = $('#marquee').children('a').last();
                 
             if (i != links.length - 1) 
-                $('#marquee').append(' <img class="emoticon" src="assets/others/mgh_17.png"> ');
+                $('#marquee').append(' <img class="emoticon" src="assets/others/rdsmile.png"> ');
         }
 
         if (window.mobileAndTabletCheck()) {
-            $("#background").replaceWith('<div id="background" style="background-image: url(https://obnoxious.club/assets/images/mobile-background.jpg);"></div>');
+            $("#background").replaceWith('<div id="background" style="background-position:center center; background-image: url(https://playday3008.github.io/assets/images/mobile-background.jpg);"></div>');
 
             app.shouldIgnoreVideo = true;
         } 
 
         app.titleChanger();
         app.iconChanger([
-            "assets/icons/roses/rose1.jpg",
-            "assets/icons/roses/rose2.jpg",
-            "assets/icons/roses/rose3.jpg",
-            "assets/icons/roses/rose4.jpg",
-            "assets/icons/roses/rose5.jpg",
-            "assets/icons/roses/rose6.jpg",
-            "assets/icons/roses/rose7.jpg",
-            "assets/icons/roses/rose8.jpg",
-            "assets/icons/roses/rose1.jpg",
+            "assets/icons/ponies/pony1.png",
+            "assets/icons/ponies/pony2.png",
+            "assets/icons/ponies/pony3.png",
+            "assets/icons/ponies/pony4.png",
+            "assets/icons/ponies/pony5.png",
+            "assets/icons/ponies/pony6.png",
+            "assets/icons/ponies/pony7.png",
+            "assets/icons/ponies/pony8.png",
+            "assets/icons/ponies/pony1.png",
         ]);
     });
 
@@ -142,7 +125,7 @@ GitHub: https://github.com/Lumm1t/obnoxious.club
         img.src = "assets/others/trollface.jpg"; 
         img.width = 64;
         img.height = 64;
-        img.alt = "obnoxious.club";
+        img.alt = "playday3008.github.io";
         img.style = "position: absolute; left: " + event.pageX + "px; top: " + event.pageY + "px; z-index: 10";
         img.className = "troll" + ( (app.skippedIntro) ? "" : " trollface-light" );
 
@@ -182,7 +165,7 @@ GitHub: https://github.com/Lumm1t/obnoxious.club
     };
 
     (function () {
-        $.getJSON('https://freegeoip.app/json/', function (data) {
+        $.getJSON('https://get.geojs.io/v1/ip/country.json', function (data) {
 
             writeLine(["Authenticating...", "Granting access to <span style='font-size: 14px; color: #06d;'>[unknown]</span>..."], 30, function () {
 
@@ -194,14 +177,14 @@ GitHub: https://github.com/Lumm1t/obnoxious.club
                 var usernames = ["user", "dude"];
 
                 writeLine(["Access granted! <span style='font-size: 14px; color: #0f0;'>[success]</span>", "Welcome back, <i style='color: #0f0'>" +  ((data.ip) ? data.ip : usernames[Math.floor(Math.random()*usernames.length)]) 
-                    + "</i>! By the way, nice to see someone from " + ((data.country_name) ? data.country_name : 'your country') + " here!"], 30, 500, function () {
+                    + "</i>! By the way, nice to see someone from " + ((data.name) ? data.name : 'your country') + " here!"], 30, 500, function () {
 
                     if (app.skippedIntro)
                         return;
 
                     clearCursor();
 
-                    writeLine(["<i style='color: #F62459'>obnoxious.club $$$</i>"], 120, 500, function () {
+                    writeLine(["<i style='color: #F62459'>playday3008.github.io $$$</i>"], 120, 500, function () {
 
                         timeouts.push(setTimeout(function () {
 
