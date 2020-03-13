@@ -166,46 +166,92 @@ GitHub: https://github.com/playday3008/playday3008.github.io
 
     (function () {
         $.getJSON('https://get.geojs.io/v1/ip/country.json', function (data) {
+			
+			if (window.mobileAndTabletCheck()) {
 
-            writeLine(["Authenticating...", "Granting access to <span style='font-size: 14px; color: #06d;'>[unknown]</span>..."], 30, function () {
+				writeLine(["Authenticating...", "Granting access to <span style='font-size: 14px; color: #06d;'>[unknown]</span>..."], 30, function () {
 
-                if (app.skippedIntro)
-                	return;
+					if (app.skippedIntro)
+						return;
 
-                clearCursor();
+					clearCursor();
 
-                var usernames = ["user", "dude"];
+					var usernames = ["user", "dude"];
 
-                writeLine(["Access granted! <span style='font-size: 14px; color: #0f0;'>[success]</span>", "Welcome back, <i style='color: #0f0'>" +  ((data.ip) ? data.ip : usernames[Math.floor(Math.random()*usernames.length)]) 
-                    + "</i>! By the way, nice to see someone from " + ((data.name) ? data.name : 'your country') + " here!"], 30, 500, function () {
+					writeLine(["Access granted! <span style='font-size: 14px; color: #0f0;'>[success]</span>", "Welcome back, <i style='color: #0f0'>" +  ((data.ip) ? data.ip : usernames[Math.floor(Math.random()*usernames.length)]) 
+						+ "</i>! <br>By the way, nice to see someone from <br>" + ((data.name) ? data.name : 'your country') + " here!"], 30, 500, function () {
 
-                    if (app.skippedIntro)
-                        return;
+						if (app.skippedIntro)
+							return;
 
-                    clearCursor();
+						clearCursor();
 
-                    writeLine(["<i style='color: #F62459'>playday3008.github.io $$$</i>"], 120, 500, function () {
+						writeLine(["<i style='color: #F62459'>playday3008.github.io $$$</i>"], 120, 500, function () {
 
-                        timeouts.push(setTimeout(function () {
+							timeouts.push(setTimeout(function () {
 
-                            if (app.skippedIntro)
-                                return;
+								if (app.skippedIntro)
+									return;
 
-                            clearCursor();
+								clearCursor();
 
-                            setTimeout(function () {
+								setTimeout(function () {
 
-                                skipIntro();
+									skipIntro();
 
-                            }, 500);
+								}, 500);
 
-                        }, 1000));
+							}, 1000));
 
-                    });
+						});
 
-                });
+					});
 
-            });
+				});
+			}
+			else
+			{
+
+				writeLine(["Authenticating...", "Granting access to <span style='font-size: 14px; color: #06d;'>[unknown]</span>...<br>Click on tab to activate audio"], 30, function () {
+
+					if (app.skippedIntro)
+						return;
+
+					clearCursor();
+
+					var usernames = ["user", "dude"];
+
+					writeLine(["Access granted! <span style='font-size: 14px; color: #0f0;'>[success]</span>", "Welcome back, <i style='color: #0f0'>" +  ((data.ip) ? data.ip : usernames[Math.floor(Math.random()*usernames.length)]) 
+						+ "</i>! By the way, nice to see someone from " + ((data.name) ? data.name : 'your country') + " here!"], 30, 500, function () {
+
+						if (app.skippedIntro)
+							return;
+
+						clearCursor();
+
+						writeLine(["<i style='color: #F62459'>playday3008.github.io $$$</i>"], 120, 500, function () {
+
+							timeouts.push(setTimeout(function () {
+
+								if (app.skippedIntro)
+									return;
+
+								clearCursor();
+
+								setTimeout(function () {
+
+									skipIntro();
+
+								}, 500);
+
+							}, 1000));
+
+						});
+
+					});
+
+				});
+			}
 
         });
 
