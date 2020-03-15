@@ -159,6 +159,12 @@ pre {
 	right: 5px;
 }
 
+.footer-right {
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+}
+
 .trollface-light {
 	-webkit-filter: invert(100%);
 	-moz-filter: invert(100%);
