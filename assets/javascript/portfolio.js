@@ -234,7 +234,7 @@ GitHub: https://github.com/playday3008/playday3008.github.io
 
 						clearCursor();
 
-						writeLine(["<i style='color: #F62459'>playday3008.github.io $$$</i>"], 120, 500, function () {
+						writeLine(["<i style='color: #F62459'>Shard-Coder.github.io $$$</i>"], 120, 500, function () {
 
 							timeouts.push(setTimeout(function () {
 
