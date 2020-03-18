@@ -34,13 +34,18 @@ GitHub: https://github.com/playday3008/playday3008.github.io
     $(document).ready(function () {
         var links = [
             {
-                name: 'PlayDay',
-                link: '76561198305949649'
+                name: 'Something is wrong here
+                link: '76561198405622623'
             },
                 
             {
-                name: 'w1ldac3',
-                link: '76561198855578500'
+                name: 'Who we?',
+                link: '76561198405622623'
+            },
+			
+			{
+                name: 'We hackers team',
+                link: '76561198405622623'
             },
                 
             {
