@@ -46,6 +46,11 @@ GitHub: https://github.com/playday3008/playday3008.github.io
             {
                 name: 'Violet Scar',
                 link: '76561198807768386'
+            },
+			
+			{
+                name: 'Shard-Coder',
+                link: '76561198405622623'
             }
         ];
          
@@ -125,7 +130,7 @@ GitHub: https://github.com/playday3008/playday3008.github.io
         img.src = "assets/others/trollface.jpg"; 
         img.width = 64;
         img.height = 64;
-        img.alt = "playday3008.github.io";
+        img.alt = "Shard-Coder.github.io";
         img.style = "position: absolute; left: " + event.pageX + "px; top: " + event.pageY + "px; z-index: 10";
         img.className = "troll" + ( (app.skippedIntro) ? "" : " trollface-light" );
 
@@ -186,7 +191,7 @@ GitHub: https://github.com/playday3008/playday3008.github.io
 
 						clearCursor();
 
-						writeLine(["<i style='color: #F62459'>playday3008.github.io $$$</i>"], 120, 500, function () {
+						writeLine(["<i style='color: #F62459'>Shard-Coder.github.io $$$</i>"], 120, 500, function () {
 
 							timeouts.push(setTimeout(function () {
 
